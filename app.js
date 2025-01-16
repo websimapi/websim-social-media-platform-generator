@@ -27,8 +27,8 @@ class PlatformGenerator {
   handleIncrease() {
     const prompt = this.increasePromptInput.value.trim();
     if (prompt) {
-      // Update the hidden link with the prompt
-      this.increaseLink.href = `https://example.com/increase?prompt=${encodeURIComponent(prompt)}`;
+      // Update the hidden link with the prompt, prepending !increase+
+      this.increaseLink.href = `https://example.com/increase?prompt=${encodeURIComponent('!increase+' + prompt)}`;
       // Programmatically click the link
       this.increaseLink.click();
       // Clear the input
