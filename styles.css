@@ -1,6 +1,6 @@
 body {
   font-family: system-ui, sans-serif;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
   background: #f0f2f5;
@@ -26,17 +26,97 @@ button {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 button:hover {
   background: #1557b0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(26,115,232,0.4);
 }
 
-#output {
-  min-height: 100px;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 6px;
+button:active {
+  transform: translateY(0);
+}
+
+.platform-card {
   background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.platform-card.current {
+  background: #e8f0fe;
+  border-left: 4px solid #1a73e8;
+}
+
+.platform-card.history {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+}
+
+.platform-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.platform-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.value {
+  font-weight: 500;
+  color: #1a73e8;
+}
+
+h3 {
+  margin-top: 0;
+  color: #1557b0;
+}
+
+h4 {
+  margin-top: 0;
+  color: #444;
+}
+
+#history {
+  margin-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+#history h3 {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.platform-card {
+  animation: fadeIn 0.3s ease-out;
 }

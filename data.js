@@ -9,7 +9,12 @@ export const socialMediaData = {
     "Decentralized",
     "Audio-based",
     "Virtual Reality",
-    "Augmented Reality"
+    "Augmented Reality",
+    "Text-based",
+    "Multi-modal",
+    "Gaming-integrated",
+    "NFT-powered",
+    "Ephemeral Content"
   ],
 
   // Target demographics
@@ -22,7 +27,13 @@ export const socialMediaData = {
     "Students",
     "Parents",
     "Local Communities",
-    "Global Citizens"
+    "Global Citizens",
+    "Digital Nomads",
+    "Entrepreneurs",
+    "Activists",
+    "Educators",
+    "Tech Enthusiasts",
+    "Creative Professionals"
   ],
 
   // Core features
@@ -35,7 +46,13 @@ export const socialMediaData = {
     "Events",
     "Polls",
     "Collaborative Tools",
-    "Content Creation Tools"
+    "Content Creation Tools",
+    "AI Content Generation",
+    "Virtual Spaces",
+    "Voice Channels",
+    "Content Monetization",
+    "Knowledge Sharing",
+    "Resource Exchange"
   ],
 
   // Unique selling points
@@ -48,7 +65,13 @@ export const socialMediaData = {
     "Privacy-focused",
     "Educational",
     "Wellness-oriented",
-    "Skill-sharing"
+    "Skill-sharing",
+    "Carbon-neutral",
+    "Community-owned",
+    "Merit-based Rewards",
+    "Real-world Integration",
+    "Social Impact Focus",
+    "Data Sovereignty"
   ],
 
   // Content focus
@@ -61,7 +84,13 @@ export const socialMediaData = {
     "Reviews",
     "Tutorials",
     "News",
-    "Memes"
+    "Memes",
+    "Podcasts",
+    "3D Models",
+    "AR Filters",
+    "Interactive Stories",
+    "Live Performances",
+    "Digital Art"
   ],
 
   // Interaction methods
@@ -74,6 +103,40 @@ export const socialMediaData = {
     "Challenges",
     "Mentoring",
     "Q&A",
-    "Voting"
+    "Voting",
+    "Virtual Gifting",
+    "Skill Endorsements",
+    "Content Remixing",
+    "Co-creation",
+    "Reputation Points",
+    "Achievement Badges"
+  ],
+  
+  // Monetization models
+  monetizationTypes: [
+    "Subscription",
+    "Freemium",
+    "Creator Fund",
+    "Digital Goods",
+    "Premium Features",
+    "Marketplace Fees",
+    "Tipping",
+    "Ad Revenue Share",
+    "Token Economy",
+    "Pay-per-view Content"
+  ],
+  
+  // Technology stack
+  techStack: [
+    "Blockchain",
+    "AI/ML",
+    "Edge Computing",
+    "5G",
+    "WebRTC",
+    "WebXR",
+    "PWA",
+    "Federated",
+    "P2P",
+    "Cloud-native"
   ]
 };
