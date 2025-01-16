@@ -13,7 +13,6 @@ class PlatformGenerator {
     this.historyDiv = document.getElementById('history');
     this.increasePromptInput = document.getElementById('increasePrompt');
     this.submitIncreaseBtn = document.getElementById('submitIncrease');
-    this.increaseLink = document.getElementById('increaseLink');
 
     this.generateBtn.addEventListener('click', () => this.generatePlatform());
     this.submitIncreaseBtn.addEventListener('click', () => this.handleIncrease());
@@ -27,10 +26,14 @@ class PlatformGenerator {
   handleIncrease() {
     const prompt = this.increasePromptInput.value.trim();
     if (prompt) {
-      // Update the hidden link with the prompt, prepending !increase+
-      this.increaseLink.href = `https://example.com/increase?prompt=${encodeURIComponent('!increase+' + prompt)}`;
-      // Programmatically click the link
-      this.increaseLink.click();
+      // Create a temporary link element
+      const tempLink = document.createElement('a');
+      tempLink.href = `https://example.com/increase?prompt=${encodeURIComponent('!increase+' + prompt)}`;
+      tempLink.style.display = 'none';
+      // Add to body, click it, then remove it
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
       // Clear the input
       this.increasePromptInput.value = '';
     }
