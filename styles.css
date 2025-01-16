@@ -106,6 +106,43 @@ h4 {
   font-size: 1.1rem;
 }
 
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.increase-prompt {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+#increasePrompt {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+#increasePrompt:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+}
+
+#submitIncrease {
+  background: #34a853;
+}
+
+#submitIncrease:hover {
+  background: #2d8644;
+  box-shadow: 0 2px 8px rgba(52,168,83,0.4);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

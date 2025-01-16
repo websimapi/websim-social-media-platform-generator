@@ -11,7 +11,29 @@ class PlatformGenerator {
     this.generateBtn = document.getElementById('generate');
     this.outputDiv = document.getElementById('output');
     this.historyDiv = document.getElementById('history');
+    this.increasePromptInput = document.getElementById('increasePrompt');
+    this.submitIncreaseBtn = document.getElementById('submitIncrease');
+    this.increaseLink = document.getElementById('increaseLink');
+
     this.generateBtn.addEventListener('click', () => this.generatePlatform());
+    this.submitIncreaseBtn.addEventListener('click', () => this.handleIncrease());
+    this.increasePromptInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        this.handleIncrease();
+      }
+    });
+  }
+
+  handleIncrease() {
+    const prompt = this.increasePromptInput.value.trim();
+    if (prompt) {
+      // Update the hidden link with the prompt
+      this.increaseLink.href = `https://example.com/increase?prompt=${encodeURIComponent(prompt)}`;
+      // Programmatically click the link
+      this.increaseLink.click();
+      // Clear the input
+      this.increasePromptInput.value = '';
+    }
   }
 
   getRandomElement(array) {

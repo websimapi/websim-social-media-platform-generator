@@ -8,11 +8,19 @@
 <body>
   <div id="app">
     <h1>Social Media Platform Generator</h1>
-    <button id="generate">Generate Platform Idea</button>
+    <div class="controls">
+      <button id="generate">Generate Platform Idea</button>
+      <div class="increase-prompt">
+        <input type="text" id="increasePrompt" placeholder="Enter an idea to expand the dataset...">
+        <button id="submitIncrease">Increase Dataset</button>
+      </div>
+    </div>
     <div id="output"></div>
     <div id="history">
       <h3>Previous Generations</h3>
     </div>
+    <!-- Hidden link that will be programmatically clicked -->
+    <a id="increaseLink" style="display: none;" href="https://example.com"></a>
   </div>
   <script type="module" src="app.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
